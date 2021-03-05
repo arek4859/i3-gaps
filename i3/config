@@ -18,7 +18,10 @@ font pango:monospace 8
 #font pango:DejaVu Sans Mono 8
 
 #colors
-client.focused          #4c7899 #285577 #ffffff #2e9ef4   #4b0082
+client.focused          #4c7899 #285577 #ffffff #4b0082   #4b0082
+
+#keyboarmap
+exec "setxkbmap -layout pl"
 
 
 # Hide titlebar
@@ -26,12 +29,12 @@ new_window pixel
 
 
 #autostart
-exec_always --no-startup-id pulseaudio --start &
 exec_always --no-startup-id picom &
 exec nitrogen --restore &
 exec tint2 &
 exec --no-startup-id dunst -config ~/.config/.dunst/dunstrc &
 exec flameshot &
+
 
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
@@ -147,7 +150,7 @@ set $ws9 "9"
 set $ws10 "10"
 
 #start software with hotkeys
-bindsym Mod4+F1 exec firefox
+bindsym Mod4+F1 exec brave
 bindsym Mod4+F2 exec thunar
 bindsym Mod4+F3 exec featherpad
 bindsym Mod4+F4 exec flameshot gui
